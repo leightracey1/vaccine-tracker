@@ -13,7 +13,7 @@ cron.schedule("*/1 * * * *", () => {
     getHackensackAppt(); 
 })
 
-getHackensackAppt()
+getHackensackAppt();
 function getHackensackAppt() {
     axios.get("https://www.hackensackmeridianhealth.org/covid19/").then(function(response){
     const $ = cheerio.load(response.data); 
