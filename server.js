@@ -28,8 +28,8 @@ function alertOfOpening(hospital) {
     client.messages
   .create({
      body: hospital,
-     from: '16148201652',
-     to: '2013595898'
+     from: process.env.fromNumber,
+     to: process.env.toNumber
    })
   .then(message => console.log(message.sid))
   .catch(err => console.log(err));
